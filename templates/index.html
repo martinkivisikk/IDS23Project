@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Spam Classifier</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+<h1>Email Spam Classifier</h1>
+<div class="container">
+    <form action="/" method="post">
+        <label for="email_text">Enter email text:</label><br>
+        <textarea name="email_text" required>{{ email_text }}</textarea><br>
+        <input type="submit" value="Predict">
+    </form>
+</div>
+
+
+{% if prediction is not none %}
+<div class="container">
+    <div id="result">
+        <h2>Result:</h2>
+        <p>Entered email text:</p>
+        <p>{{ email_text }}</p>
+        <p>Prediction:</p>
+        <p>{{ prediction }}</p>
+    </div>
+</div>
+
+{% endif %}
+</body>
+</html>
