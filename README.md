@@ -6,13 +6,13 @@ Repository for the Intro to Data Science project.
 1. Clone the repository to your local machine:
 
     ```bash
-    git clone https://github.com/your-username/your-project.git
+    git clone https://github.com/martinkivisikk/IDS23Project.git
     ```
 
 2. Navigate to the project directory:
 
     ```bash
-    cd your-project
+    cd IDS23Project
     ```
 
 3. Create a virtual environment (optional but recommended):
@@ -39,6 +39,9 @@ Repository for the Intro to Data Science project.
 
     ```bash
     pip install -r requirements.txt
+    ```
+    ```bash
+    python nltk_setup.py
     ```
 
 ## Usage
