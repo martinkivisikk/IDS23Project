@@ -68,3 +68,7 @@ input:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     width: 100%; /* Set full width for the form and result divs */
 }
+select {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}

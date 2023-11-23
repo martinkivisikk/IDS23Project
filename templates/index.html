@@ -8,27 +8,30 @@
     <link rel="stylesheet" href="../static/style.css">
 </head>
 <body>
-<h1>Email Spam Classifier</h1>
-<div class="container">
-    <form action="/" method="post">
-        <label for="email_text">Enter email text:</label><br>
-        <textarea name="email_text" required>{{ email_text }}</textarea><br>
-        <input type="submit" value="Predict">
-    </form>
-</div>
-
-
-{% if prediction is not none %}
-<div class="container">
-    <div id="result">
-        <h2>Result:</h2>
-        <p>Entered email text:</p>
-        <p>{{ email_text }}</p>
-        <p>Prediction:</p>
-        <p>{{ prediction }}</p>
+    <h1>Email Spam Classifier</h1>
+    <div class="container">
+        <form action="/" method="post">
+            <label for="email_text">Enter email text:</label><br>
+            <textarea name="email_text" required>{{ email_text }}</textarea><br>
+            <label for="model">Choose a model:</label>
+            <select name="model" id="model">
+                {% for model_name in model_names %}
+                    <option value="{{ model_name }}" {% if selected_model == model_name %}selected{% endif %}>{{ model_name }}</option>
+                {% endfor %}
+            </select><br>
+            <input type="submit" value="Predict">
+        </form>
     </div>
-</div>
 
-{% endif %}
+    {% if prediction is not none %}
+    <div class="container">
+        <div id="result">
+            <h2>Result:</h2>
+            <p>Prediction: {{ prediction }}</p>
+            <p>Probability: {{ probability|round(3) }}</p>
+            <p>Selected Model: {{ selected_model }}</p>
+        </div>
+    </div>
+    {% endif %}
 </body>
 </html>
