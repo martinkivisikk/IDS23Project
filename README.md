@@ -40,6 +40,9 @@ Repository for the Intro to Data Science project.
     ```bash
     pip install -r requirements.txt
     ```
+    ```bash
+    python nltk_setup.py
+    ```
 
 ## Usage
 
