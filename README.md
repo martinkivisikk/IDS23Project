@@ -1,6 +1,10 @@
 # IDS23Project
 Repository for the Intro to Data Science project.
 
+## Access the project online
+
+[ids23project.onrender.com](https://ids23project.onrender.com/)
+
 ## Installation
 
 1. Clone the repository to your local machine:
