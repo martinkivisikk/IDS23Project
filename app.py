@@ -7,8 +7,9 @@ app = Flask(__name__)
 
 # Define the available models and their paths
 model_paths = {
-    'NaiveBayes': 'models/NaiveBayes.pkl',
-    # Add more models as needed
+    'Naive Bayes': 'models/NaiveBayes.pkl',
+    'Logistic Regression': 'models/LogisticRegression.pkl',
+    'KNN3': 'models/model_KNN3.pkl'
 }
 
 # Load your trained model and vectorizer
@@ -46,16 +47,22 @@ def index():
             lemmatizer = WordNetLemmatizer()
             preprocessed_text = ' '.join([lemmatizer.lemmatize(word) for word in filtered_text])
 
-            # Vectorize the preprocessed text
-            input_vector = vectorizer.transform([preprocessed_text])
-
             # Make prediction and get probability
             if selected_model not in models:
                 raise ValueError(f"Selected model '{selected_model}' is not available.")
+            if selected_model == 'KNN3':
+                vectorizer = joblib.load('models/countVectorizer.pkl')
+            elif selected_model == 'Logistic Regression':
+                vectorizer = joblib.load('models/LRvectorizer.pkl')
+            else:
+                vectorizer = joblib.load('models/vectorizer.pkl')
 
+            # Vectorize the preprocessed text
+            input_vector = vectorizer.transform([preprocessed_text])
             prediction = models[selected_model].predict(input_vector)
+            # print(prediction)
             probability = models[selected_model].predict_proba(input_vector)[:, 1]  # Assuming binary classification
-
+            # print(models[selected_model].predict_proba(input_vector))
             # Convert prediction to "Spam" or "Not Spam"
             prediction_label = "Spam" if prediction[0] == 1 else "Not spam"
             probability = 1 - probability[0] if prediction[0] == 0 else probability[0]
