@@ -1,9 +1,11 @@
 # IDS23Project
-Repository for the Intro to Data Science project.
+Repository for the Intro to Data Science project. Authors: Martin Kivisikk, Margaret Pütsepp, Ella Hiedel. Spam emails have become an issue, posing threats to individuals and organizations. This project aims to address this challenge through the development of an effective classification model. The consequences of spam emails include productivity loss, security concerns, and potential financial risks. The goal of this project is to implement and compare different machine learning models to accurately classify emails as spam or non-spam.
+
 
 ## Access the project online
 
 [ids23project.onrender.com](https://ids23project.onrender.com/)
+
 NB! Using the KNN3 model on the website will produce an out of memory error, testable on local machine only.
 
 ## Installation
