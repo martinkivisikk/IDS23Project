@@ -4,6 +4,7 @@ Repository for the Intro to Data Science project.
 ## Access the project online
 
 [ids23project.onrender.com](https://ids23project.onrender.com/)
+NB! Using the KNN3 model on the website will produce an out of memory error, testable on local machine only.
 
 ## Installation
 
