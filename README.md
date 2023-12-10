@@ -57,6 +57,8 @@ NB! Using the KNN3 model on the website will produce an out of memory error, tes
 
 ## Usage
 
+Download the dataset from [here](https://www.kaggle.com/datasets/purusinghvi/email-spam-classification-dataset/data) and store the combined_data.csv file in IDS23Project/data/
+
 1. Run the Flask application:
 
     ```bash
