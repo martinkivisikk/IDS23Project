@@ -6,7 +6,7 @@ Repository for the Intro to Data Science project. Authors: Martin Kivisikk, Marg
 
 [ids23project.onrender.com](https://ids23project.onrender.com/)
 
-NB! Using the KNN3 model on the website will produce an out of memory error, testable on local machine only.
+NB! Using the KNN3 model on the website will produce an out of memory error, testable on local machine only. Also, if the website has been inactive for some time, initial loading might take a bit as we are using a free hosting service.
 
 ## Installation
 
