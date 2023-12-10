@@ -3,6 +3,8 @@ Repository for the Intro to Data Science project. Authors: Martin Kivisikk, Marg
 
 Most of the work is done in models/model.py and the notebooks folder. The logic for the interactive web application is written in the app.py file.
 
+Most of the code is commented and should be simple to understand for people that have taken this course. (Process data -> Extract features -> Train model(s))
+
 
 ## Access the project online
 
