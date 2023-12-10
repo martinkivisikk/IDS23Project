@@ -5,6 +5,8 @@ Most of the work is done in models/model.py and the notebooks folder. The logic 
 
 Most of the code is commented and should be simple to understand for people that have taken this course. (Process data -> Extract features -> Train model(s))
 
+The dataset can be found [here](https://www.kaggle.com/datasets/purusinghvi/email-spam-classification-dataset/data) and the combined_data.csv file should be stored in IDS23Project/data/
+
 
 ## Access the project online
 
@@ -56,8 +58,6 @@ NB! Using the KNN3 model on the website will produce an out of memory error, tes
     ```
 
 ## Usage
-
-Download the dataset from [here](https://www.kaggle.com/datasets/purusinghvi/email-spam-classification-dataset/data) and store the combined_data.csv file in IDS23Project/data/
 
 1. Run the Flask application:
 
